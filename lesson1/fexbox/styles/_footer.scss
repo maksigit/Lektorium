@@ -1,0 +1,40 @@
+.wrap-footer-items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  .footer-item {
+    color: $color-white;
+    width: 27%;
+    padding: 15px 20px;
+    background: $color-boulder;
+    font: $primary-font;
+    ul {
+      li {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .footer-item:first-child {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+  }
+  .footer-item:nth-child(2) {
+    ul {
+      list-style-type: square;
+    }
+  }
+  .footer-item:nth-child(3) {
+    padding: 0;
+    background: transparent;
+    div {
+      width: 100%;
+      background: $color-boulder;
+      height: 60px;
+    }
+  }
+}
