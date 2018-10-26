@@ -1,5 +1,5 @@
 body {
-  padding: 0 50px; }
+  padding: 0 5%; }
 
 .container {
   max-width: 1000px;
@@ -23,6 +23,9 @@ body {
   background: #767676;
   float: left;
   margin: 0 10px 0 0; }
+  @media (max-width: 600px) {
+    .block1 {
+      float: none; } }
 
 .block2 {
   width: 280px;
@@ -30,13 +33,20 @@ body {
   background: #767676;
   float: left;
   margin: 0 30px 0 30px; }
+  @media (max-width: 600px) {
+    .block2 {
+      margin: 10px 0 0 0;
+      width: 100%; } }
 
 .block3 {
-  width: 520px;
+  width: 52%;
   height: 120px;
   background: #767676;
-  float: left;
-  margin: 0 0 0 10px; }
+  float: left; }
+  @media (max-width: 1103px) {
+    .block3 {
+      margin: 10px 0 0 0;
+      width: 100%; } }
 
 .container {
   position: relative; }
@@ -64,6 +74,16 @@ body {
       width: 180px;
       position: absolute;
       bottom: 30px; }
+      @media (max-width: 420px) {
+        .container .side-bar .side-bar-bottom {
+          position: static;
+          margin-top: 10px; } }
+    @media (max-width: 1060px) {
+      .container .side-bar {
+        float: none; }
+        .container .side-bar .side-bar-bottom {
+          top: 30px;
+          right: 0; } }
   .container .main-content {
     width: 760px;
     float: right; }
@@ -101,6 +121,19 @@ body {
       .container .main-content .main-content-bottom ul li:nth-child(2) {
         float: right;
         margin-right: 0; }
+    @media (max-width: 700px) {
+      .container .main-content .main-content-bottom ul li {
+        width: inherit;
+        float: none;
+        margin: 10px 0 0 0; }
+      .container .main-content .main-content-bottom ul li:nth-child(2) {
+        float: none; } }
+    @media (max-width: 1060px) {
+      .container .main-content {
+        float: none;
+        width: 100%; }
+        .container .main-content .main-content-top {
+          margin: 10px 0 10px 0; } }
 
 .wrap-footer-items {
   margin: 0;
@@ -128,7 +161,8 @@ body {
       padding: 0;
       list-style-type: none; }
   .wrap-footer-items .footer-item:nth-child(2) ul {
-    list-style-type: square; }
+    list-style-type: square;
+    float: none; }
   .wrap-footer-items .footer-item:nth-child(3) {
     padding: 0;
     background: transparent;
@@ -141,5 +175,16 @@ body {
       position: absolute;
       bottom: 15px;
       width: inherit; }
+      @media (max-width: 1113px) {
+        .wrap-footer-items .footer-item:nth-child(3) div:last-child {
+          position: static;
+          width: 100%;
+          margin-top: 10px; } }
+  @media (max-width: 1113px) {
+    .wrap-footer-items .footer-item {
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+      width: inherit; } }
 
 /*# sourceMappingURL=style.css.map */

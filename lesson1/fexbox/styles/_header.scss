@@ -2,19 +2,27 @@
   width: 120px;
   height: 120px;
   background: $color-boulder;
-  margin: 0 10px 0 0;
+  margin: auto;
 }
 
 .block2 {
   width: 280px;
   height: 120px;
   background: $color-boulder;
-  margin: 0 10px 0 10px;
+  margin: auto;
+
+  @media (max-width: 460px) {
+    margin: 10px auto 0;
+  }
 }
 
 .block3 {
   width: 520px;
   height: 120px;
   background: $color-boulder;
-  margin: 0 0 0 10px;
+  margin: auto;
+
+  @media (max-width: 1034px) {
+    margin: 10px auto 0;
+  }
 }

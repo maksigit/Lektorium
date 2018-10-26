@@ -32,6 +32,31 @@
     height: 140px;
     width: 180px;
   }
+
+  @media (max-width: 1054px) {
+    //margin: auto;
+    width: 100%;
+    justify-content: space-between;
+
+    .side-bar-top {
+      width: 48%;
+    }
+
+    .side-bar-bottom {
+      width: 48%;
+    }
+  }
+
+  @media (max-width: 865px) {
+    .side-bar-top {
+      width: 100%;
+    }
+
+    .side-bar-bottom {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
 }
 
 .main-content {
@@ -83,5 +108,18 @@
         color: $color-boulder;
       }
     }
+
+    @media (max-width: 755px) {
+      ul {
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1054px) {
+    margin-top: 10px;
+    width: 100%;
   }
 }

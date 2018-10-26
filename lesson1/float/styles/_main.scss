@@ -37,6 +37,20 @@
       width: 180px;
       position: absolute;
       bottom: 30px;
+
+      @media (max-width: 420px) {
+        position: static;
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 1060px) {
+      float: none;
+
+      .side-bar-bottom {
+        top: 30px;
+        right: 0;
+      }
     }
   }
 
@@ -95,6 +109,29 @@
           float: right;
           margin-right: 0;
         }
+      }
+
+      @media (max-width: 700px) {
+        ul {
+          li {
+            width: inherit;
+            float: none;
+            margin: 10px 0 0 0;
+          }
+
+          li:nth-child(2) {
+            float: none;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1060px) {
+      float: none;
+      width: 100%;
+
+      .main-content-top {
+        margin: 10px 0 10px 0;
       }
     }
   }

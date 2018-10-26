@@ -37,4 +37,17 @@
       height: 60px;
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .footer-item {
+      width: inherit;
+      margin-top: 10px;
+    }
+
+    .footer-item:first-child {
+      margin-top: 0;
+    }
+  }
 }
