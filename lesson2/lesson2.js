@@ -70,18 +70,38 @@ function maxMinSum(arr, func) {
   return result
 }
 
-console.log('MAX =>', maxMinSum([3,0,-5,1,44,-12,3,0,0,1,2,-3,-3,2,1,4,-2-3-1], max));
-console.log('MIN =>', maxMinSum([3,0,-5,1,44,-12,3,0,0,1,2,-3,-3,2,1,4,-2-3-1], min));
-console.log('SUM =>', maxMinSum([3,0,-5,1,44,-12,3,0,0,1,2,-3,-3,2,1,4,-2-3-1], sum));
-console.log('MAX =>', maxMinSum([-1,-8,-2], max));
-console.log('MIN =>', maxMinSum([-1,-8,-2], min));
-console.log('SUM =>', maxMinSum([-1,-8,-2], sum));
-console.log('MAX =>', maxMinSum([1,7,3], max));
-console.log('MIN =>', maxMinSum([1,7,3], min));
-console.log('SUM =>', maxMinSum([1,7,3], sum));
-console.log('MAX =>', maxMinSum([1,undefined,3,5,-3], max));
-console.log('MIN =>', maxMinSum([1,undefined,3,5,-3], min));
-console.log('SUM =>', maxMinSum([1,undefined,3,5,-3], sum));
-console.log('MAX =>', maxMinSum([1,NaN,3,5,-3], max));
-console.log('MIN =>', maxMinSum([1,NaN,3,5,-3], min));
-console.log('SUM =>', maxMinSum([1,NaN,3,5,-3], sum));
+let currentArr = [3,0,-5,1,44,-12,3,0,0,1,2,-3,-3,2,1,4,-2-3-1];
+
+console.log(currentArr);
+
+console.log('MAX =>', maxMinSum(currentArr, max));
+console.log('MIN =>', maxMinSum(currentArr, min));
+console.log('SUM =>', maxMinSum(currentArr, sum));
+
+currentArr = [-1,-8,-2];
+console.log(currentArr);
+
+console.log('MAX =>', maxMinSum(currentArr, max));
+console.log('MIN =>', maxMinSum(currentArr, min));
+console.log('SUM =>', maxMinSum(currentArr, sum));
+
+currentArr = [1,7,3];
+console.log(currentArr);
+
+console.log('MAX =>', maxMinSum(currentArr, max));
+console.log('MIN =>', maxMinSum(currentArr, min));
+console.log('SUM =>', maxMinSum(currentArr, sum));
+
+currentArr = [1,undefined,3,5,-3];
+console.log(currentArr);
+
+console.log('MAX =>', maxMinSum(currentArr, max));
+console.log('MIN =>', maxMinSum(currentArr, min));
+console.log('SUM =>', maxMinSum(currentArr, sum));
+
+currentArr = [1,NaN,3,5,-3];
+console.log(currentArr);
+
+console.log('MAX =>', maxMinSum(currentArr, max));
+console.log('MIN =>', maxMinSum(currentArr, min));
+console.log('SUM =>', maxMinSum(currentArr, sum));
