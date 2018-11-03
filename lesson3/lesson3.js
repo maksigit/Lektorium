@@ -1,44 +1,43 @@
 function getWaterAmount(arr) {
-  let arrLength = arr.length;
   let current = 0;
   let total = 0;
-  let boo = false;
-  let maxCurrent2 = [];
+  let bool = false;
+  let maxCurrentLeft = [];
 
-  function maxCurrent(cur, arr) {
-    for (let i = 0; i < arrLength; i++) {
+  function maxCurrentRight(cur, arr) {
+    for (let i = 0; i < arr.length; i++) {
       if (arr[i] > cur) {
-        boo = false;
+        bool = false;
         break
       } else {
-        boo = true
+        bool = true
       }
     }
-    return boo
+    return bool
   }
 
-  for (let i = 0; i < arrLength; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (current < arr[i] && arr[i] > arr[i + 1]) {
       current = arr[i];
-      if (current > arr[i + 1] && arr[i + 1] < arr[i + 2] && maxCurrent(current, arr)) {
-        maxCurrent2 = arr.slice(i + 1);
-        maxCurrent2 = Math.max.apply(null, maxCurrent2);
-        if (current > maxCurrent2) {
-          total += (maxCurrent2 - arr[i + 1]);
+      if (current > arr[i + 1] && arr[i + 1] < arr[i + 2] && maxCurrentRight(current, arr)) {
+        maxCurrentLeft = arr.slice(i + 1);
+        maxCurrentLeft = Math.max.apply(null, maxCurrentLeft);
+        if (current > maxCurrentLeft) {
+          total += maxCurrentLeft - arr[i + 1];
         } else {
-          total += (current - arr[i + 1])
+          total += current - arr[i + 1];
         }
-      } else if (i !== arrLength - 2) {
+      } else if (i !== arr.length - 2) {
 
-        total += (current - arr[i + 1])
+        total += current - arr[i + 1];
       }
     } else if (arr[i + 1] < current) {
-      maxCurrent2 = arr.slice(i + 1);
-      maxCurrent2 = Math.max.apply(null, maxCurrent2);
-      if (current > maxCurrent2) {
-        total += (maxCurrent2 - arr[i + 1]);
+      maxCurrentLeft = arr.slice(i + 1);
+      maxCurrentLeft = Math.max.apply(null, maxCurrentLeft);
+      if (current > maxCurrentLeft) {
+        total += maxCurrentLeft - arr[i + 1];
       } else {
-        total += (current - arr[i + 1])
+        total += current - arr[i + 1];
       }
     }
   }
